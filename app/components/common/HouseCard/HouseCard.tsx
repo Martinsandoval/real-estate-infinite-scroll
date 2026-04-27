@@ -15,6 +15,7 @@ import Dialog from "../Dialog/Dialog";
 import { House } from "@/app/types/types";
 
 export interface HouseCardProps {
+  /** The house data to display in the card and in the detail dialog. */
   house: House;
 }
 

@@ -2,10 +2,13 @@
 import ImageList from "./components/common/ImageList/ImageList";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Flex, Heading, Text } from "@radix-ui/themes";
+import { useHouses } from "@/app/hooks/useHouses";
+import HouseCardGrid from "@/app/components/common/HouseCardGrid/HouseCardGrid";
 
 const queryClient = new QueryClient();
 
 export default function Home() {
+  const { fetchPage } = useHouses();
   return (
     <QueryClientProvider client={queryClient}>
       <Flex
@@ -20,7 +23,7 @@ export default function Home() {
             Browse available properties
           </Text>
         </Flex>
-        <ImageList />
+        <HouseCardGrid fetchPage={fetchPage} />;
       </Flex>
     </QueryClientProvider>
   );

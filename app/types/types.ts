@@ -1,17 +1,25 @@
+/** A real estate property listing returned by the API. */
 export interface House {
+  /** Unique identifier for the property. */
   id: string;
+  /** Street address of the property. */
   address: string;
+  /** Listing price as a numeric string (e.g. `"450000"`). */
   price: string;
+  /** Full name of the current homeowner. */
   homeowner: string;
+  /** URL of the property's primary photo. */
   photoURL: string;
 }
 
-/** Convenience alias — the fetchPage function must return this shape. */
+/** One page of house results, compatible with {@link UseInfiniteScrollOptions}. */
 export type HousePage = InfiniteScrollPage<House>;
 
+/** A single page of paginated results used by the infinite scroll system. */
 export interface InfiniteScrollPage<T> {
+  /** Items returned for this page. */
   items: T[];
-  /** Cursor for the next page, or null when there are no more pages. */
+  /** Cursor for the next page, or `null` when there are no more pages. */
   nextCursor: string | null;
 }
 

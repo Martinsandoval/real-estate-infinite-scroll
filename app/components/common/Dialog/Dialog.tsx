@@ -8,12 +8,19 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 import "./Dialog.css";
 
 interface GenericDialogProps {
+  /** Whether the dialog is open. */
   open: boolean;
+  /** Callback fired when the open state changes (e.g. user closes via overlay or close button). */
   onOpenChange: (open: boolean) => void;
+  /** Heading shown in the dialog header. Accepts a plain string or a custom element. */
   title: string | React.ReactElement;
+  /** Optional subtext rendered below the title. */
   description?: ReactNode;
+  /** Main body content of the dialog. */
   content?: ReactNode;
+  /** Footer area, typically used for action buttons. */
   actions?: ReactNode;
+  /** Visual style variant. Defaults to `DialogVariant.INFO`. */
   variant?: DialogVariant;
 }
 
@@ -23,18 +30,14 @@ enum DialogVariant {
 }
 
 /**
- * A flexible modal dialog component built on Radix UI.
+ * A flexible modal dialog built on Radix UI.
  *
- * This component provides a customizable modal dialog with support for different visual variants,
- * controlled open/close state, and flexible content areas. It includes an overlay backdrop,
- * close button, and optional sections for title, description, content, and actions.
+ * Provides controlled open/close state, an overlay backdrop, a close button,
+ * and optional sections for description, body content, and footer actions.
  *
- * @variant
- * - **info** (default): Blue accent, for general information or confirmations
- * - **danger**: Red accent, for destructive actions like delete or irreversible operations
- * - **warning**: Yellow/orange accent, for caution messages or important notices
- *
- * @author Martin Sandoval
+ * Variants:
+ * - **info** (default): Blue accent, for general information or confirmations.
+ * - **danger**: Red accent, for destructive or irreversible actions.
  */
 const Dialog: React.FC<React.PropsWithChildren<GenericDialogProps>> = ({
   open,

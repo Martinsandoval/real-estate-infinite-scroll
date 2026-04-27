@@ -15,11 +15,6 @@ export interface HouseCardGridProps {
    * Receives the cursor for the page to fetch (null = first page).
    */
   fetchPage: (cursor: string | null) => Promise<HousePage>;
-  /**
-   * TanStack Query key — change to re-fetch or scope the cache.
-   * @default ["houses"]
-   */
-  queryKey: string[];
 }
 
 const HouseCardSkeleton: React.FC = () => (
@@ -40,10 +35,7 @@ const NEXT_PAGE_SKELETON_COUNT = 3;
  * Responsive grid of HouseCards with infinite scroll.
  * Infinite scroll logic is handled by useInfiniteScroll.
  */
-const HouseCardGrid: React.FC<HouseCardGridProps> = ({
-  fetchPage,
-  queryKey = ["houses"],
-}) => {
+const HouseCardGrid: React.FC<HouseCardGridProps> = ({ fetchPage }) => {
   const {
     items,
     isLoading,
@@ -51,7 +43,7 @@ const HouseCardGrid: React.FC<HouseCardGridProps> = ({
     isError,
     refetch,
     sentinelRef,
-  } = useInfiniteScroll<House>({ queryKey, fetchPage });
+  } = useInfiniteScroll<House>({ queryKey: ["houses"], fetchPage });
 
   if (isError) {
     return (
