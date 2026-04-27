@@ -1,5 +1,4 @@
 "use client";
-import ImageList from "./components/common/ImageList/ImageList";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Flex, Heading, Text } from "@radix-ui/themes";
 import { useHouses } from "@/app/hooks/useHouses";

@@ -57,7 +57,6 @@ const Dialog: React.FC<React.PropsWithChildren<GenericDialogProps>> = ({
             className={clsx("DialogBody", {
               "DialogBody--info": variant === "info",
               "DialogBody--danger": variant === "danger",
-              "DialogBody--warning": variant === "warning",
             })}
             onInteractOutside={(e) => {
               e.preventDefault();
