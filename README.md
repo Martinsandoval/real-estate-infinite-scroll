@@ -2,6 +2,32 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This is hosted here https://real-estate-infinite-scroll-2x6u.vercel.app/
 
+## Getting Started
+
+Install dependencies:
+```bash
+npm i
+```
+
+Then, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+
 ## Testing
 
 This project uses [Vitest](https://vitest.dev/) with [Testing Library](https://testing-library.com/) for unit and component tests.
@@ -36,26 +62,6 @@ Tests live alongside the source files they cover:
 | `app/components/common/ImageList/ImageList.tsx`           | `ImageList.test.tsx`        |
 | `app/components/common/InfiniteScroll/InfiniteScroll.tsx` | `InfiniteScroll.test.tsx`   |
 | `app/hooks/useInfiniteScroll.ts`                          | `useInfiniteScroll.test.ts` |
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
