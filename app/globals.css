@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import "./styles/_variables.css";
+
+:root {
+  /* Primary Button */
+  --cascade-primary-color: #024c8c;
+  --cascade-primary-color-disabled: #024c8c;
+  --cascade-primary-color-hover: #00335f;
+  --cascade-primary-color-hover-2: #00335f;
+
+  --cascade-primary-color-focus: #0060b4;
+  --cascade-primary-color-button-text: #fcfcfd;
+
+  /* Secondary Button */
+  --cascade-secondary-color: #fbfbfb;
+  --cascade-secondary-color-text: #024c8c;
+  --cascade-secondary-border-color: #024c8c1a;
+  --cascade-secondary-color-text-disabled: #fbfbfb;
+  --cascade-secondary-color-hover: #024c8c1a;
+  --cascade-secondary-color-focus: #fbfbfb;
+
+  /* Stepper */
+  --cascade-stepper-color: #8b8d98;
+
+  /* Main Panel */
+  --cascade-main-panel-bg-color: #fff;
+  --cascade-main-panel-text-color: #000;
+
+  /* Icon */
+  --cascade-icon-color: #000000;
+  --cascade-icon-hover-color: #ebebeb;
+
+  /* Sidebar */
+  --cascade-sidebar-bg-color: #f8f8f8;
+  --cascade-sidebar-hover-color: #e6edf3;
+  --cascade-sidebar-width-lg: 205px;
+  --cascade-sidebar-text-color: #000000;
+
+  /* Header */
+  --cascade-header-bg-color: #ffffff;
+  --cascade-header-text-color: #000000;
+  --cascade-header-height: 63px;
+  --cascade-header-font-size: 14px;
+  --cascade-contract-header-bg: #ffffff;
+
+  /* Font */
+  --cascade-font-family: "Lato", sans-serif;
+
+  /* Timing */
+  --cascade-timing-fast: 150ms;
+  --cascade-timing-normal: 250ms;
+  --cascade-timing-slow: 500ms;
+  --cascade-timing-slowest: 750ms;
+  --cascade-timing-function: cubic-bezier(0.07, 0.91, 0.51, 1);
+
+  /* Status colors: Info, Danger, Warning, Success */
+  --cascade-color-success: #00a4337c;
+  --cascade-color-info: #e1f6fd;
+  --cascade-color-text-info: #003d8d;
+  --cascade-color-warning: #ffde003d;
+  --cascade-color-text-warning: #ab6400;
+  --cascade-color-danger: #e63946;
+  --cascade-color-danger-hover: #e3535e;
+  --cascade-color-text-danger: #eee8e8;
+  --cascade-color-gray: #00005506;
+  --cascade-color-toast-success: #00a43393;
+  --cascade-color-success-callout: #bff0cea8;
+
+  /* Shadows */
+  --cascade-light-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+  --cascade-dark-shadow: 0 12px 32px -16px rgba(0, 9, 50, 0.2);
+
+  /* Table */
+  --cascade-table-header-color: #f3f7fb;
+
+  /* Chart */
+  --cascade-chart-bg-color: #f4f9fc;
+
+  /* Card */
+  --cascade-card-bg-color: #f4f9fc;
+
+  --cascade-dialog-bg: #fff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

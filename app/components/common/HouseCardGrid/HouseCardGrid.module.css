@@ -1,0 +1,59 @@
+.root {
+  width: 100%;
+}
+
+/* ── Skeleton card ───────────────────────────────────────── */
+
+.skeleton {
+  border: 1px solid var(--cascade-border-color);
+  border-radius: var(--cascade-input-border-radius);
+  background-color: var(--cascade-main-panel-bg-color);
+  box-shadow: var(--cascade-light-shadow);
+  overflow: hidden;
+}
+
+.skeletonPhoto {
+  width: 100%;
+  height: 200px !important;
+  border-radius: 0 !important;
+}
+
+/* ── Sentinel ────────────────────────────────────────────── */
+
+.sentinel {
+  height: 1px;
+  width: 100%;
+}
+
+/* ── Empty state ─────────────────────────────────────────── */
+
+.emptyState {
+  width: 100%;
+}
+
+.emptyIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--cascade-stepper-color);
+  opacity: 0.5;
+}
+
+/* ── Error state ─────────────────────────────────────────── */
+
+.callout {
+  align-items: center;
+}
+
+.retryButton {
+  background: none;
+  border: none;
+  color: var(--cascade-primary-color);
+  cursor: pointer;
+  font-size: var(--font-size-2);
+  padding: 0;
+  text-decoration: underline;
+}
+
+.retryButton:hover {
+  opacity: 0.8;
+}
