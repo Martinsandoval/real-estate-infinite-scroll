@@ -66,8 +66,6 @@ Tests live alongside the source files they cover:
 | `app/components/common/Dialog/Dialog.tsx`                 | `Dialog.test.tsx`           |
 | `app/components/common/HouseCard/HouseCard.tsx`           | `HouseCard.test.tsx`        |
 | `app/components/common/HouseCardGrid/HouseCardGrid.tsx`   | `HouseCardGrid.test.tsx`    |
-| `app/components/common/ImageList/ImageList.tsx`           | `ImageList.test.tsx`        |
-| `app/components/common/InfiniteScroll/InfiniteScroll.tsx` | `InfiniteScroll.test.tsx`   |
 | `app/hooks/useInfiniteScroll.ts`                          | `useInfiniteScroll.test.ts` |
 
 ## Learn More
