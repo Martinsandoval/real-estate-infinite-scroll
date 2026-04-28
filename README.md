@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Tech Stack
+- NextJS
+- TypeScript
+- RadixUI (components library)
+- React TanStack Query
+- Vitest
+
 This is hosted here https://real-estate-infinite-scroll-2x6u.vercel.app/
 
 ## Getting Started
